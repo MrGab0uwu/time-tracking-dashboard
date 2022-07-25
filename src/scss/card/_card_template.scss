@@ -1,0 +1,228 @@
+@use '../globals/variables' as v;
+
+.card {
+	background-color: v.$dark-blue;
+	border-radius: 15px;
+	color: white;
+	position: relative;
+	border: 0px solid transparent;
+	min-height: 160px; 
+
+
+
+
+	// User card
+	&--user {
+		min-height: 203px;
+	}
+
+	&__user {
+		&-info {
+			background-color: v.$blue;
+			border-radius: 15px;
+			padding: 30px;
+			height: 70%;
+			display: grid;
+			place-items: center;
+			grid-template-columns: repeat(3, 1fr);
+      gap:20px;
+		}
+
+		&-info:hover{
+			cursor: pointer;
+		}
+
+		@media (min-width: 600px) {
+			&-info {
+        display: block;
+				padding: 30px;
+				place-items: start;
+			}
+		}
+
+		&-picture {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		@media (min-width: 600px) {
+			&-picture {
+				display: block;
+			}
+		}
+
+		&-picture img {
+      min-width: 64px;
+			width: 6vw;
+			border-radius: 50%;
+			border: 3px solid #fff;
+		}
+
+		@media (min-width: 600px) {
+			&-picture {
+				width: clamp(30%, 8vw, 50%);
+        margin-bottom: 4vh;
+			}
+		}
+
+		&-title-wrapper {
+			grid-column-start: 2;
+			grid-column-end: 4;
+		}
+
+		&-title {
+			font-weight: 400;
+			font-size: max(13px, 1.2vw);
+			color: v.$pale-blue;
+		}
+    
+		&-name {
+			color: #fff;
+			font-weight: 300;
+			font-size: max(24px, 3vw);
+		}
+	}
+
+	// Time secction
+	.time {
+		padding: 20px 30px;
+		height: 30%;
+		&__selection {
+			display: flex;
+			align-items: center;
+      justify-content: space-between;
+			height: 100%;
+			color: v.$desaturated-blue;
+
+      & > li:hover{
+				color: #fff;
+        cursor:pointer;
+      }
+		}
+
+	}
+
+  @media (min-width:800px){
+    .time{
+      padding: 4vh 30px;
+      &__selection{
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  }
+
+	// Background Styles
+
+	&--Work {
+		background-color: v.$light-orange;
+		background-image: url('/assets/images/icon-work.svg');
+		background-repeat: no-repeat;
+		background-position: 90% -8%;
+	}
+
+
+	&--Play {
+		background-color: v.$soft-blue;
+		background-image: url('/assets/images/icon-play.svg');
+		background-repeat: no-repeat;
+		background-position: 90% -7.5%;
+	}
+
+	&--Study {
+		background-color: v.$light-red;
+		background-image: url('/assets/images/icon-study.svg');
+		background-repeat: no-repeat;
+		background-position: 90% -7.5%;
+	}
+
+	&--Exercise {
+		background-color: v.$lime-green;
+		background-image: url('/assets/images/icon-exercise.svg');
+		background-repeat: no-repeat;
+		background-position: 90% 0%;
+	}
+
+	&--Social {
+		background-color: v.$violet;
+		background-image: url('/assets/images/icon-social.svg');
+		background-repeat: no-repeat;
+		background-position: 90% -10%;
+	}
+
+	&--SelfCare {
+		background-color: v.$soft-yellow;
+		background-image: url('/assets/images/icon-self-care.svg');
+		background-repeat: no-repeat;
+		background-position: 90% -7.5%;
+	}
+
+	// Common Styles
+
+	&__info {
+		background-color: v.$dark-blue;
+		border-radius: 15px;
+		width: 100%;
+		padding: 24px;
+
+		position: absolute;
+		bottom: 0;
+	}
+	
+	&__info:hover{
+		background-color: v.$hover-blue;
+		cursor: pointer;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1vh;
+	}
+
+	// Activities title
+	&__title {
+		font-weight: 500;
+		font-size: min(1.1em, 18px);
+	}
+	&__dots {
+		width: clamp(9%, 1.7vw, 30%);
+	}
+
+	&__dots:hover{
+		filter: brightness(2);
+	}
+
+  // Time spent
+
+  &__time-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+	&__time-current {
+		font-size: max(32px, 4.1vw);
+		font-weight: 300;
+		line-height: 1.5;
+	}
+	&__time-previous {
+    display: inline-block;
+		color: v.$pale-blue;
+    font-size: 15px;
+	}
+
+}
+
+.active {
+	color: #fff;
+}
+
+@media (min-width: 800px) {
+	.card--user {
+		grid-row: 1 / 3;
+	}
+}
