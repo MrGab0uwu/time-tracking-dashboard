@@ -41,7 +41,7 @@ function loadUserTime(date = 'weekly') {
     <div class="card card--user">
       <header class="card__user-info">
         <picture class="card__user-picture">
-          <source srcset="${userPicture}" width="100px">
+          <source srcset="${userPicture}">
           <img src="${userPicture}" alt="User picture">
         </picture>
         <div class="card__user-title-wrapper">
@@ -91,83 +91,3 @@ loadUserTime();
 
 const resetStatus = (btns) =>
 	btns.forEach((elm) => elm.classList.remove('active'));
-
-{
-	/* <article class="card card--Work">
-<section class="card__info">
-  <header class="card__header">
-    <h2 class="card__title">Work</h2>
-    <img class="card__dots" src="${ellipsis}" alt="User picture">
-  </header>
-  <div class="card__time-wrapper">
-    <p class="card__time-current">32hrs</p>
-    <p class="card__time-previous">Last Week - 36hrs</p>
-  </div>
-</section>
-</article>
-
-<article class="card card--Play">
-<section class="card__info">
-  <header class="card__header">
-    <h2 class="card__title">Play</h2>
-    <img class="card__dots" src="${ellipsis}" alt="User picture">
-  </header>
-  <div class="card__time-wrapper">
-    <p class="card__time-current">32hrs</p>
-    <p class="card__time-previous">Last Week - 36hrs</p>
-  </div>
-</section>
-</article>
-
-<article class="card card--Study">
-<section class="card__info">
-  <header class="card__header">
-    <h2 class="card__title">Study</h2>
-    <img class="card__dots" src="${ellipsis}" alt="User picture">
-  </header>
-  <div class="card__time-wrapper">
-    <p class="card__time-current">32hrs</p>
-    <p class="card__time-previous">Last Week - 36hrs</p>
-  </div>
-</section>
-</article>
-
-<article class="card card--Exercise">
-<section class="card__info">
-  <header class="card__header">
-    <h2 class="card__title">Exercise</h2>
-    <img class="card__dots" src="${ellipsis}" alt="User picture">
-  </header>
-  <div class="card__time-wrapper">
-    <p class="card__time-current">32hrs</p>
-    <p class="card__time-previous">Last Week - 36hrs</p>
-  </div>
-</section>
-</article>
-
-<article class="card card--Social">
-<section class="card__info">
-  <header class="card__header">
-    <h2 class="card__title">Social</h2>
-    <img class="card__dots" src="${ellipsis}" alt="User picture">
-  </header>
-  <div class="card__time-wrapper">
-    <p class="card__time-current">32hrs</p>
-    <p class="card__time-previous">Last Week - 36hrs</p>
-  </div>
-</section>
-</article>
-
-<article class="card card--SelfCare">
-<section class="card__info">
-  <header class="card__header">
-    <h2 class="card__title">Self Care</h2>
-    <img class="card__dots" src="${ellipsis}" alt="User picture">
-  </header>
-  <div class="card__time-wrapper">
-    <p class="card__time-current">32hrs</p>
-    <p class="card__time-previous">Last Week - 36hrs</p>
-  </div>
-</section>
-</article> */
-}
