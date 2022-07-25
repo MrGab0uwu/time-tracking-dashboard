@@ -19,8 +19,8 @@ function loadUserTime(date = 'weekly') {
 
 		const { current, previous } = userData[i].timeframes[date];
 
-		componentList += `<article class="card card--${title.split(' ').join('')}">
-        <section class="card__info">
+		componentList += `<div class="card card--${title.split(' ').join('')}">
+        <article class="card__info">
           <header class="card__header">
             <h2 class="card__title">${title}</h2>
             <img class="card__dots" src="${ellipsis}" alt="User picture">
@@ -31,14 +31,14 @@ function loadUserTime(date = 'weekly') {
 							calendary[date]
 						} - ${previous}hrs</p>
           </div>
-        </section>
-      </article>`;
+        </article>
+      </div>`;
 	}
 
 	dashboard.innerHTML = `
   <section class="time-tracking">
 
-    <article class="card card--user">
+    <div class="card card--user">
       <header class="card__user-info">
         <picture class="card__user-picture">
           <source srcset="${userPicture}" width="100px">
@@ -56,7 +56,7 @@ function loadUserTime(date = 'weekly') {
           <li id="monthly">Monthly</li>
         </ul>
       </nav>
-    </article>
+    </div>
 
     ${componentList}
 
